@@ -46,29 +46,19 @@ sudo apt install build-essential libssl-dev libffi-dev python3-dev
 pip install -r requirements.txt
 ```
 
-4. Run the original (readable) script
-```bash
-python3 mlw_extractor.py path/to/file.mlw
-```
-- Output: a file named `path/to/file.mp4` (same basename as input) will be created if decryption succeeds.
-
-5. Use the obfuscated version (if included)
-- If this repository includes an obfuscated build in `obf_dist/` and you prefer to run that:
+4. Run the script
 ```bash
 python3 obf_dist/mlw_extractor.py path/to/file.mlw
 ```
-- Note: the obfuscated runtime (`pyarmor_runtime_000000/`) must be present next to the obfuscated script. The obfuscated build may be platform-specific (e.g., linux.x86_64).
 
-6. Deactivate venv when done
+5. Deactivate venv when done
 ```bash
 deactivate
 ```
 
-7. Troubleshooting
+6. Troubleshooting
 - InvalidTag / authentication error — means key/iv/tag/ciphertext mismatch; check you used the correct file and key.
 - If Python complains about missing packages, ensure you activated the virtualenv and ran `pip install -r requirements.txt`.
-- If the obfuscated script fails with runtime-related errors, confirm the `pyarmor_runtime_000000/` folder exists and matches your platform.
-
 ---
 
 ### Português — Passo a passo
@@ -97,51 +87,17 @@ sudo apt install build-essential libssl-dev libffi-dev python3-dev
 pip install -r requirements.txt
 ```
 
-4. Executar o script original (legível)
-```bash
-python3 mlw_extractor.py caminho/para/arquivo.mlw
-```
-- Saída: será gerado `caminho/para/arquivo.mp4` (mesmo nome base) se a descriptografia for bem-sucedida.
-
-5. Usar a versão ofuscada (se incluída)
-- Se este repositório incluir `obf_dist/` com a versão ofuscada, rode:
+4. Executar o script
 ```bash
 python3 obf_dist/mlw_extractor.py caminho/para/arquivo.mlw
 ```
-- Observação: a pasta `pyarmor_runtime_000000/` deve estar presente junto ao script ofuscado. A build ofuscada pode ser específica de plataforma (ex.: linux.x86_64).
 
-6. Desativar o venv quando terminar
+5. Desativar o venv quando terminar
 ```bash
 deactivate
 ```
 
-7. Resolução de problemas
+6. Resolução de problemas
 - Erro InvalidTag — indica que a tag de autenticação não conferiu (chave/iv/ct/tag incorretos ou arquivo corrompido).
 - Se faltar algum pacote Python, ative o venv e execute `pip install -r requirements.txt`.
-- Se a versão ofuscada falhar por runtime, confirme se a pasta `pyarmor_runtime_000000/` está no mesmo diretório e compatível com sua plataforma.
-
 ---
-
-### Files and structure / Arquivos e estrutura recomendada
-
-- mlw_extractor.py — original script (readable)
-- obf_dist/ — optional: PyArmor obfuscated output (not committed by default)
-- pyarmor_runtime_000000/ — required if using obf_dist/mlw_extractor.py (must be present alongside obfuscated script)
-- requirements.txt — Python dependencies (e.g., cryptography)
-- .gitignore — ignores venv, build artifacts, and media files
-
----
-
-### Security note / Observações de segurança
-
-- The obfuscation only increases the effort required to read the source; it does not make it impossible. Do not store long-term secrets (private keys, production secrets) directly in the source code. Use environment variables or secret managers for sensitive data.
-- The obfuscated runtime is often platform-specific — if you plan to distribute cross-platform, build obfuscated artifacts for each target platform.
-
----
-
-Se quiser, eu adapto o README para incluir:
-- O comando exato do seu repositório (substituindo `your-username` por `ph-py`),
-- O bloco de exemplo de commit/push,
-- E instruções para criar o requirements.txt automaticamente a partir do venv (`pip freeze > requirements.txt`).
-
-Quer que eu já gere o README.md pronto com esses ajustes personalizados para o seu repositório (incluindo seu nome de usuário e comando git)?
