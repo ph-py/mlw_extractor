@@ -55,11 +55,6 @@ python3 mlw_extractor.py path/to/file.mlw
 deactivate
 ```
 
-6. Troubleshooting
-- InvalidTag / authentication error — means key/iv/tag/ciphertext mismatch; check you used the correct file and key.
-- If Python complains about missing packages, ensure you activated the virtualenv and ran `pip install -r requirements.txt`.
----
-
 ### Português — Passo a passo
 
 1. Clonar repositório
@@ -95,8 +90,3 @@ python3 mlw_extractor.py caminho/para/arquivo.mlw
 ```bash
 deactivate
 ```
-
-6. Resolução de problemas
-- Erro InvalidTag — indica que a tag de autenticação não conferiu (chave/iv/ct/tag incorretos ou arquivo corrompido).
-- Se faltar algum pacote Python, ative o venv e execute `pip install -r requirements.txt`.
----
