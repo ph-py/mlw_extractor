@@ -1,1 +1,9 @@
-cryptography
+cffi==2.1.0
+cryptography==49.0.0
+packaging==26.2
+pyarmor==9.2.5
+pyarmor.cli.core==8.1.1
+pycparser==3.0
+python_minifier==3.2.0
+setuptools==83.0.0
+wheel==0.47.0
