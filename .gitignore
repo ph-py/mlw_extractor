@@ -2,3 +2,9 @@
 *.mlw
 *__pycache__/
 *.vscode/
+.venv/
+venv/
+*.pyc
+obf_dist/
+dist/
+build/
