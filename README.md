@@ -14,10 +14,9 @@ Ferramenta em Python para extração de arquivos de vídeo de containers .mlw (u
 
 ## How to install and use / Como instalar e usar
 
-Below are step-by-step instructions in both English and Portuguese to set up a virtual environment, install dependencies, test the script, and (optionally) use the obfuscated PyArmor build included in this repository.
+Below are step-by-step instructions.
 
-Abaixo estão instruções passo a passo em inglês e português para criar um ambiente virtual, instalar dependências, testar o script e (opcionalmente) usar a versão ofuscada gerada pelo PyArmor incluída neste repositório.
-
+Abaixo estão instruções passo a passo.
 ---
 
 ### English — Quick start
