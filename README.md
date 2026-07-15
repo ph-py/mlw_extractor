@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 4. Run the script
 ```bash
-python3 obf_dist/mlw_extractor.py path/to/file.mlw
+python3 mlw_extractor.py path/to/file.mlw
 ```
 
 5. Deactivate venv when done
@@ -89,7 +89,7 @@ pip install -r requirements.txt
 
 4. Executar o script
 ```bash
-python3 obf_dist/mlw_extractor.py caminho/para/arquivo.mlw
+python3 mlw_extractor.py caminho/para/arquivo.mlw
 ```
 
 5. Desativar o venv quando terminar
